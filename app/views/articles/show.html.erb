@@ -10,18 +10,9 @@
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
 </button>
+<h2>Comments</h2>
+<%= render @article.comments %>
+
 <h2>Add a comment:</h2>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
 <button><%= link_to "Back",articles_path()%></button>
