@@ -2,17 +2,17 @@
 
 <p><%= @article.body %></p>
 <p >Number of words in article: <%= @article.words%></p>
-<button>
-  <%= link_to "Edit", edit_article_path(@article) %>
+<button class="btn btn-warning btn-sm ml-2">
+  <%= link_to "Edit", edit_article_path(@article), style:"color: white"%>
 </button>
-<button>
+<button class="btn btn-danger btn-sm ml-2 text-white">
 <%= link_to "Delete", article_path(@article),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+                  data: { confirm: "Are you sure?" } , style:"color: white"%>
 </button>
 <h2>Comments</h2>
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-<button><%= link_to "Back",articles_path()%></button>
+<button class="btn btn-warning btn-sm m-2"><%= link_to "Back",articles_path(), style:"color: white"%></button>

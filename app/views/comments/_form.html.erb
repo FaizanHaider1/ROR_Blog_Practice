@@ -1,18 +1,20 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
+  <div class = "form-group">
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
+    <%= form.text_field :commenter, class:"form-control col-md-2 ml-2"%>
+  </div>
+  <div class = "form-group">
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+    <%= form.text_area :body , class:"form-control col-md-2 ml-2"%>
+  </div>
+  <div class="actions">
+    <%= form.submit "Create comment", class:"btn btn-sm ml-2 btn-primary"%>
+  </div>
 
-<p>
-  <%= form.label :status %><br>
+<div>
+  <%= form.label :status, class: "mt-2"%><br>
   <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
-</p>
+</div>
+
+
 <% end %>
