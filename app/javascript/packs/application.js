@@ -13,8 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 
-require("channels")
 require('jquery')
 
 import "bootstrap"
-import "./src/application.scss"
+// import ".//application.scss"
