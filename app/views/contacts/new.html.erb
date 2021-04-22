@@ -1,0 +1,8 @@
+<h1 class = " text-center">Contact Us</h1>
+<div class ="row justify-content-center">
+    <%= render "form", contact: @contacts %>
+</div>
+<div class=" row justify-content-center ">
+    <button class="btn btn-sm btn-success m-2 "><%= link_to "Send",new_contact_path(), style: "color : white"%></button> 
+    <button class="btn btn-sm btn-warning m-2"><%= link_to "Back",articles_path(), style: "color : white"%></button> 
+</div>

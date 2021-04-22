@@ -1,0 +1,25 @@
+
+<%= form_with model: @contact do |form| %>
+    <div class="row">
+        <div>
+            <%= form.label :subject %><br>
+        </div>
+        <div class = "row justify-content-center">
+            <%=form.text_field :subject , class:"form-control col-sm-9 m-2 "%>
+        </div>
+    </div>
+
+    <div class = "row justify-content-center">
+        <%= form.label :email %><br>
+        <%= form.text_field :email , class:"form-control col-sm-9 m-2"%><br>
+    </div>
+    
+    <div class = "">
+        <%= form.label :message %><br>
+        <%= form.text_area :message , class:"form-control col-sm-12 ml-2 row justify-content-center"%><br>
+    </div>
+
+    <div class = "row justify-content-center">
+        <%= form.submit "Send", class:"btn btn-sm btn-primary m-2"%>
+    </div>
+<% end %>
