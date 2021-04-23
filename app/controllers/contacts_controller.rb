@@ -14,9 +14,8 @@ class ContactsController < ApplicationController
       @contact = Contact.new(contact_params)
   
       if @contact.save
-        render html: "<script>alert('Message sent successfully #{contact_params}')</script>".html_safe
-        # redirect_to index_contact_path
-        return
+        render html: "<script>alert('Message sent successfully #{contact_params}')</script>".html_safe and return
+        redirect_to new_contact_path
       end
     end
 
