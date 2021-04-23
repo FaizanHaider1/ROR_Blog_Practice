@@ -1,0 +1,10 @@
+<div><h2 class = "card text-center">Messages Received</h2>
+Our blog has received <span style="color: Blue"><%= Contact.all.size %></span> message(s)!
+
+<ul>
+  <% @contacts.each do |contact| %>
+    <li class="card m-2 text-center" style="width: 15rem">
+      <%= link_to contact.email, contact %>
+    </li>
+  <% end %>
+</ul>
